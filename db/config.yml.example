@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  database: open_weixin_proxy_development
+  encoding: unicode
+  username: dbuser
+  password: db.password
+  pool: 5
+
+development:
+  <<: *default
+  database: open_weixin_proxy_development
+
+test:
+  <<: *default
+  database: open_weixin_proxy_test
+
+production:
+  <<: *default
+  database: open_weixin_proxy_production

@@ -1,0 +1,22 @@
+ defaults: &defaults
+  host: 127.0.0.1
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: data_stats_development
+  port: 3306
+  pool: 5
+  username: dbuser
+  password: db.password
+
+development:
+  <<: *default
+  database: data_stats_development
+
+test:
+  <<: *default
+  database: data_stats_test
+
+production:
+  <<: *default
+  database: data_stats_production
